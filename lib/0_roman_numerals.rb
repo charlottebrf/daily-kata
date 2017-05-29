@@ -1,12 +1,13 @@
 class RomanNumerals
 
   def convert_numeral(num)
+    numeral = "I"
     if num == 3
-      "I" + "I" + "I"
+      numeral * num
     elsif num == 2
-      "I" + "I"
-    elsif  num == 1
-      "I"
+      numeral * num
+    elsif num == 1
+      numeral * num
     end
   end
 

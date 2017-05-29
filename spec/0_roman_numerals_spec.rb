@@ -18,5 +18,8 @@ describe RomanNumerals do
   it "returns V for 5" do
     expect(numeral.convert_numeral(5)).to eq "V"
   end
+  it "returns VI for 6" do
+    expect(numeral.convert_numeral(6)).to eq "VI"
+  end
 
 end

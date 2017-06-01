@@ -11,4 +11,7 @@ describe RomanNumerals do
   it 'returns III when given 3' do
     expect(numerals.convert(3)).to eq "III"
   end
+  it 'returns IV when given 4' do
+    expect(numerals.convert(4)).to eq "IV"
+  end
 end

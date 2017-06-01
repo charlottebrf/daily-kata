@@ -6,6 +6,8 @@ class RomanNumerals
       'I' * num
     when num == 4
       'I' + 'V'
+    when num == 5
+      'V'
     end
   end
 

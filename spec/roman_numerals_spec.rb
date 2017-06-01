@@ -17,4 +17,7 @@ describe RomanNumerals do
   it 'returns V when given 5' do
     expect(numerals.convert(5)).to eq "V"
   end
+  it 'returns VI when given 6' do
+    expect(numerals.convert(6)).to eq "VI"
+  end
 end

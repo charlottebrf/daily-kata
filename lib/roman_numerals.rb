@@ -1,16 +1,12 @@
 class RomanNumerals
 
   def convert(num)
-    case
-    when num <= 3
-      'I' * num
-    when num == 4
-      'I' + 'V'
-    when num == 5
-      'V'
-    when num == 6
-      'V' + 'I'
-    end
+    outcome = ""
+    outcome = 'I' * num if num <= 3
+    outcome = 'IV' if num == 4
+    outcome = 'V' if num == 5
+    outcome = 'V' + 'I' if num == 6
+    outcome
   end
 
 end

@@ -1,24 +1,18 @@
 class Numerals
-
   def convert(arabic)
     one = 'I'
     five = 'V'
+    ten = 'X'
     numeral = ''
     if arabic == 10
-      numeral = five + five
+      numeral = ten
     elsif arabic == 9
-      numeral = five + one * 4
-    elsif arabic == 8
-      numeral = five + one * 3
-    elsif arabic == 7
-      numeral = five + one * 2
-    elsif arabic == 6
-      numeral = five + one
-    elsif arabic == 5
-      numeral = five
+      numeral = one + ten
+    elsif 4 < arabic && arabic < 9
+      numeral = five + one * (arabic - 5)
     elsif arabic == 4
       numeral = one + five
-    elsif arabic == 1 || 2 || 3
+    else
       numeral = one * arabic
     end
     numeral

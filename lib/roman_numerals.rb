@@ -1,12 +1,14 @@
-class RomanNumerals
+class Numerals
 
-  def convert(num)
-    outcome = ""
-    outcome = 'I' * num if num <= 3
-    outcome = 'IV' if num == 4
-    outcome = 'V' if num == 5
-    outcome = 'V' + 'I' if num == 6
-    outcome
+  def convert_to_numeral(arabic)
+    i = 0
+    numbers = ''
+
+    while i < 3 do
+      numbers = 'I' * arabic
+      i += 1
+    end
+    numbers
   end
 
 end

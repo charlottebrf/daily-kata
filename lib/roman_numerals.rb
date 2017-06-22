@@ -6,9 +6,7 @@ class ArabicToNumeral
     numeral = ''
     numeral = ten            if arabic == 10
     numeral = one + ten      if arabic == 9
-    numeral = five + one * 3 if arabic == 8
-    numeral = five + one * 2 if arabic == 7
-    numeral = five + one     if arabic == 6
+    numeral = five + one * (arabic - 5) if 6 <= arabic && arabic <= 8
     numeral = five           if arabic == 5
     numeral = one + five     if arabic == 4
     numeral = one * arabic   if arabic <= 3

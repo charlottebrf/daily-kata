@@ -75,11 +75,15 @@ describe RomanNumerals do
     expect(numeral.convert(18)).to eq 'XVIII'
   end
 
-  it 'returns XIV when given 19' do
-    expect(numeral.convert(19)).to eq 'XIV'
+  it 'returns XIX when given 19' do
+    expect(numeral.convert(19)).to eq 'XIX'
   end
 
   it 'returns XX when given 20' do
     expect(numeral.convert(20)).to eq 'XX'
+  end
+
+  it 'returns XXXVIII when given 38' do
+    expect(numeral.convert(38)).to eq 'XXXVIII'
   end
 end

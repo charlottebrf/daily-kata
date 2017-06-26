@@ -3,24 +3,16 @@ require 'roman_numerals'
 describe RomanNumerals do
   subject(:numeral) { described_class.new }
 
-  it 'gives an I when passed a 1' do
-    expect(numeral.converter(1)).to eq 'I'
-  end
-
-  it 'gives a II when passed a 2' do
-    expect(numeral.converter(2)).to eq 'II'
-  end
-
-  it 'gives an III when passed a 3' do
-    expect(numeral.converter(3)).to eq 'III'
-  end
-
-  it 'gives an IV when passed a 4' do
-    expect(numeral.converter(4)).to eq 'IV'
-  end
-
-  it 'gives a V when passed a 5' do
-    expect(numeral.converter(5)).to eq 'V'
+  {
+    1 => 'I',
+    2 => 'II',
+    3 => 'III',
+    4 => 'IV',
+    5 => 'V',
+  }.each do |arabic, roman|
+    it "gives an #{roman} when passed a #{arabic}" do
+      expect(numeral.converter(arabic)).to eq roman
+    end
   end
 
   it 'gives an VI when passed a 6' do
@@ -73,5 +65,9 @@ describe RomanNumerals do
 
   it 'gives an XVIII when passed a 18' do
     expect(numeral.converter(18)).to eq 'XVIII'
+  end
+
+  it 'gives an XX when passed a 20' do
+    expect(numeral.converter(20)).to eq 'XX'
   end
 end

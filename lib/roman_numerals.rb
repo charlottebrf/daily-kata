@@ -1,23 +1,19 @@
 class RomanNumerals
 
   def converter(arabic)
-    one = 'I'
-    four = 'IV'
-    five = 'V'
-    nine = 'IX'
-    ten = 'X'
     numeral = ''
 
-    if arabic >= 10
-      numeral = ten + converter(arabic - 10)
-    elsif arabic == 9
-      numeral = nine
-    elsif arabic >= 5
-      numeral = five + converter(arabic - 5)
-    elsif arabic == 4
-      numeral = four
-    elsif arabic >= 1
-      numeral = one * arabic
+    {
+      10 => 'X',
+       9 => 'IX',
+       5 => 'V',
+       4 => 'IV',
+       1 => 'I'
+    }.each do |num, roman|
+      while arabic >= num
+        numeral += roman
+        arabic -= num
+      end
     end
     numeral
   end

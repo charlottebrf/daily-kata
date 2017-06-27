@@ -1,5 +1,4 @@
-class RomanNumerals
-
+class Numerals
   def converter(arabic)
     one = 'I'
     four = 'IV'
@@ -10,7 +9,7 @@ class RomanNumerals
 
     if arabic >= 10
       numeral = ten + converter(arabic - 10)
-    elsif arabic == 9
+    elsif arabic >= 9
       numeral = nine
     elsif arabic >= 5
       numeral = five + converter(arabic - 5)
@@ -21,5 +20,4 @@ class RomanNumerals
     end
     numeral
   end
-
 end
